@@ -6,4 +6,4 @@ Coding convention in MLC follows the most modern programming conventions allowin
 This project is still under development.
 
 ## Contribution
-Event though the project is still under development, you are encouraged to contribute to the development.
+Even though the project is still under development, you are encouraged to contribute to the development.
