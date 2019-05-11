@@ -1,15 +1,16 @@
 #ifndef BIGINT_H
 #define BIGINT_H
 
-#define B "\""
 #include<bits/stdc++.h>
+
+#define B "\""
 
 class bigint
 {
 	private:
 		char *_value;
 		
-		bool _IsCorrectValue(char *value);
+		bool IsCorrectValue(char *value);
 	
 	public:
 		bigint();	

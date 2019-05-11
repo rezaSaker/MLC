@@ -1,19 +1,25 @@
 #include "../include/bigint.h"
-
+using namespace std;
 //------------------------------------
 //private method defintion begins here
 //------------------------------------
 
-bool bigint::_IsCorrectValue(char *value)
+bool bigint::IsCorrectValue(char *value)
 {
+	if(strlen(value) > 1000000)
+	{
+		return false;		
+	}
+	
 	for(int i = 0; value[i] != '\0'; ++i)
 	{
 		//if the character is not digit
-		if(value[i] < 30 || value[i] > 39)
+		if(value[i] < 48 || value[i] > 57)
 		{
-			return false;
+			return false;			
 		}
 	}
+	
 	return true;
 }
 
@@ -39,7 +45,7 @@ bigint::bigint(const bigint &obj)
 
 void bigint::operator =(char *value)
 {
-	if(_IsCorrectValue(value))
+	if(IsCorrectValue(value))
 	{
 		strcpy(this->_value, value);
 	}
